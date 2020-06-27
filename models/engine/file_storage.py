@@ -4,7 +4,7 @@ import json
 
 
 class FileStorage():
-    __file_path = "/home/vagrant/arbn_borrador/file.json"
+    __file_path = "/home/vagrant/arbn_prev/file.json"
     __objects = {}
     
 

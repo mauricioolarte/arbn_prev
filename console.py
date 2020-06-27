@@ -29,21 +29,13 @@ class HBNBCommand(cmd.Cmd):
         else:
             print('** class doesn\'t exist **')
     
-    def do_show(self, *args):
+    def do_show(self, line):
         """
             Prints the string representation of an instance based on the class
             name and id. Ex: $ show BaseModel 1234-1234-1234.
         """
-        if len(args) < 1:
-            print('** class name missing **')
-        elif args[1] != 'BaseModel':
-            print('** class doesn\'t exist **')
-        if len(args) == 2 and args[1] == 'BaseModel':
-            print('** instance id missing **')
-        
-        
-        else:
-            print('** class doesn\'t exist **')
+        arg = line.split()
+        print(arg)
 
     
 if __name__ == '__main__':
