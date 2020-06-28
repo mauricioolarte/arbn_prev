@@ -18,9 +18,15 @@ class FileStorage():
         return self.__objects
 
     def save(self):
+        dic = {}
+        for id, obj in self.__objects.items():
+            dic[id] = obj.to_dict()
         with open(self.__file_path, 'w') as file:
-            json.dump(self.__objects, file)
+            json.dump(dic, file)
     
     def reload(self):
         with open(self.__file_path, 'r') as file:
-            self.__objects = json.load(file)
+            obj = json.load(file)
+        for key, value in obj.items():
+            name = models.classes[value["__class__"]](**value)
+            self.__objects[key] = value
