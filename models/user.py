@@ -1,7 +1,13 @@
 #!/usr/bin/python3
-from model.model_base import ModelBase
+""" this module content the class amenety
+    atributes:
+        text, user_id, place_id
+"""
+from models.base_model import BaseModel
 
-class User(ModelBase):
+
+class User(BaseModel):
+    """ classes that inherit from BaseModel"""
     email = ""
     password = ""
     first_name = ""

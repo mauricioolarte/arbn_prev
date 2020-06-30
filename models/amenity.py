@@ -8,8 +8,7 @@ from models import storage
 from models.base_model import BaseModel
 
 
-
 class Amenity(BaseModel):
     """ this class is amenity """
 
-        name = ""
+    name = ""

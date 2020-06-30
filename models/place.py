@@ -2,7 +2,8 @@
 """ this module content the class amenety
     atributes:
         name, city_id, user_id: string, name, description, number_rooms,
-        number_bathrooms, max_guest, price_by_night, latitude, longitude, amenity_ids
+        number_bathrooms, max_guest, price_by_night, latitude, longitude,
+        amenity_ids
 """
 
 from models import storage
