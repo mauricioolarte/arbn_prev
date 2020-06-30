@@ -199,11 +199,7 @@ class HBNBCommand(cmd.Cmd):
             key = advance_commad[0] + '.' + advance_commad[3]
             for obj in list_obj.keys():
                 if key == obj:
-                    del list_obj[key]
-       
-
-
-
+                    del list_obj[key]     
         # return cmd.Cmd.default(self, line)
 
 if __name__ == '__main__':
